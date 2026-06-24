@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naffa Premium - Solusi Akun Premium Murah & Terpercaya</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        maroon: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#5c0616', /* Primary Deep Maroon */
+                            900: '#38020a', /* Darkest Maroon */
+                            950: '#1f0004',
+                        },
+                        pinkish: {
+                            50: '#fff0f3',
+                            100: '#ffccd5',
+                            200: '#ffb3c1',
+                            300: '#ff85a1',
+                            400: '#ff4d6d',
+                            500: '#c9184a', /* Accent Pinkish Maroon */
+                            600: '#a4133c',
+                            700: '#800f2f',
+                            800: '#590d22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar matching Pinkish Maroon theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f0004;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #590d22;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c9184a;
+        }
+        /* Zoom & Pan Styles for Lightbox */
+        .zoom-container {
+            overflow: auto;
+            max-height: 80vh;
+            max-width: 90vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .zoom-image {
+            transition: transform 0.2s ease;
+            cursor: zoom-in;
+            max-width: 100%;
+            height: auto;
+        }
+        .zoom-image.zoomed {
+            cursor: zoom-out;
+            max-width: none;
+        }
+    </style>
+</head>
+<body class="bg-maroon-50 text-maroon-900 dark:bg-maroon-950 dark:text-gray-100 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <!-- Loading Screen Animasi -->
+    <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-maroon-950 text-white transition-opacity duration-500">
+        <div class="relative w-24 h-24 mb-4">
+            <div class="absolute inset-0 border-4 border-maroon-800 rounded-full"></div>
+            <div class="absolute inset-0 border-4 border-t-pinkish-500 rounded-full animate-spin"></div>
+            <div class="absolute inset-0 flex items-center justify-center font-bold text-xl text-pinkish-500">NP</div>
+        </div>
+        <h2 class="text-xl font-bold tracking-wider animate-pulse text-pinkish-200">NAFFA PREMIUM</h2>
+        <p class="text-xs text-maroon-300 mt-2">Menyiapkan pengalaman premium...</p>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-maroon-950/80 backdrop-blur-md border-b border-maroon-100 dark:border-maroon-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-maroon-800 to-pinkish-500 flex items-center justify-center shadow-lg shadow-maroon-900/20 dark:shadow-none border border-white/10">
+                        <span class="text-white font-extrabold text-lg">N</span>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-maroon-900 dark:text-white">
+                        NAFFA<span class="text-pinkish-500"> PREMIUM</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation (Sekarang Lebih Lengkap!) -->
+                <nav class="hidden lg:flex space-x-6">
+                    <a href="#home" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-home"></i> Home</a>
+                    <a href="#pricelist" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-tags"></i> Pricelist</a>
+                    <a href="#order-form-section" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-shopping-cart"></i> Kalkulator Order</a>
+                    <a href="#cara-order" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-route"></i> Cara Order</a>
+                    <a href="#cek-garansi-section" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-shield-alt"></i> Cek Garansi</a>
+                    <a href="#edu-section" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-book-reader"></i> Tips</a>
+                    <a href="#faq" class="text-maroon-800 dark:text-gray-200 hover:text-pinkish-500 dark:hover:text-pinkish-500 font-bold text-sm transition flex items-center gap-1.5"><i class="fas fa-question-circle"></i> FAQ</a>
+                </nav>
+
+                <!-- Right side controls (Dark Mode & Action Button) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="theme-toggle" class="p-2.5 rounded-xl bg-maroon-100 dark:bg-maroon-900 text-maroon-900 dark:text-gray-100 hover:scale-105 transition duration-200">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+                    <a href="https://www.instagram.com/naffaprem/" target="_blank" class="px-5 py-2.5 rounded-xl bg-maroon-800 hover:bg-maroon-700 dark:bg-pinkish-500 dark:hover:bg-pinkish-600 text-white dark:text-white font-bold text-sm shadow-md transition duration-200 flex items-center gap-2">
+                        <i class="fab fa-instagram"></i> Instagram Admin
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center lg:hidden gap-3">
+                    <button id="mobile-theme-toggle" class="p-2.5 rounded-xl bg-maroon-100 dark:bg-maroon-900 text-maroon-900 dark:text-gray-100">
+                        <i id="mobile-theme-icon" class="fas fa-moon"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-maroon-900 dark:text-white hover:text-pinkish-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Sekaruh Lebih Lengkap!) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-maroon-900 border-b border-maroon-100 dark:border-maroon-800 animate-fade-in">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="#pricelist" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-tags mr-2"></i>Pricelist</a>
+                <a href="#order-form-section" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-shopping-cart mr-2"></i>Kalkulator Order</a>
+                <a href="#cara-order" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-route mr-2"></i>Cara Order</a>
+                <a href="#cek-garansi-section" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-shield-alt mr-2"></i>Cek Garansi</a>
+                <a href="#edu-section" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-book-reader mr-2"></i>Tips Merawat Akun</a>
+                <a href="#faq" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-maroon-900 dark:text-gray-200 hover:bg-maroon-50 dark:hover:bg-maroon-850 hover:text-pinkish-500 transition"><i class="fas fa-question-circle mr-2"></i>FAQ</a>
+                <a href="https://www.instagram.com/naffaprem/" target="_blank" class="w-full text-center block px-4 py-3 rounded-lg bg-pinkish-500 text-white font-bold transition">
+                    <i class="fab fa-instagram mr-2"></i>Hubungi Admin di Instagram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden pt-12 pb-24 md:py-32 bg-gradient-to-b from-maroon-100 via-white to-maroon-50 dark:from-maroon-950 dark:via-maroon-950/90 dark:to-maroon-950 transition-colors duration-300">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-pinkish-500/10 dark:bg-pinkish-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-maroon-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-maroon-100 dark:bg-maroon-900/60 border border-maroon-200 dark:border-maroon-800 text-maroon-900 dark:text-pinkish-300 text-xs font-bold uppercase tracking-wider animate-bounce">
+                        <i class="fas fa-shield-alt text-pinkish-500"></i> Akun Legal, Murah & Bergaransi Penuh
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-maroon-950 dark:text-white leading-tight">
+                        Penyedia Akun Premium <br class="hidden sm:inline" />
+                        <span class="bg-gradient-to-r from-maroon-800 to-pinkish-500 dark:from-pinkish-400 dark:to-rose-300 bg-clip-text text-transparent">
+                            Terlengkap & Proses Kilat
+                        </span>
+                    </h1>
+                    
+                    <p class="text-lg text-maroon-800 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                        Kami menyediakan berbagai akun premium digital legal berkualitas mulai dari Netflix, Spotify, Canva Pro, hingga ChatGPT Plus dengan harga mahasiswa. Pengiriman instan dan amanah!
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#pricelist" class="px-8 py-4 rounded-2xl bg-maroon-800 hover:bg-maroon-700 dark:bg-pinkish-500 dark:hover:bg-pinkish-400 text-white font-bold text-lg shadow-xl transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i class="fas fa-tags"></i> Cari Akun Favorit
+                        </a>
+                        <a href="#order-form-section" class="px-8 py-4 rounded-2xl bg-white dark:bg-maroon-900 border-2 border-maroon-200 dark:border-maroon-800 text-maroon-900 dark:text-white hover:bg-maroon-50 dark:hover:bg-maroon-850 font-bold text-lg shadow-md transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i class="fas fa-calculator text-pinkish-500 text-xl"></i> Kalkulator Order WA
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-10 border-t border-maroon-200 dark:border-maroon-800/60">
+                        <div class="text-center lg:text-left">
+                            <p class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-pinkish-400">1,500+</p>
+                            <p class="text-xs sm:text-sm text-maroon-600 dark:text-gray-400 font-medium">Pelanggan Puas</p>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <p class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-pinkish-400">100%</p>
+                            <p class="text-xs sm:text-sm text-maroon-600 dark:text-gray-400 font-medium">Full Garansi</p>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <p class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-pinkish-400">1-15m</p>
+                            <p class="text-xs sm:text-sm text-maroon-600 dark:text-gray-400 font-medium">Proses Tercepat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Artwork / Hero Image -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- Floating Card Decorators -->
+                        <div class="absolute -top-6 -left-6 bg-white dark:bg-maroon-900 p-4 rounded-2xl shadow-xl border border-maroon-100 dark:border-maroon-800 flex items-center gap-3 z-20 animate-bounce">
+                            <div class="w-10 h-10 bg-pinkish-50 dark:bg-maroon-950 text-pinkish-500 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-maroon-500 dark:text-gray-400">Status Admin</p>
+                                <p class="text-sm font-bold text-maroon-900 dark:text-white">Online & Siap Proses</p>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-6 -right-6 bg-white dark:bg-maroon-900 p-4 rounded-2xl shadow-xl border border-maroon-100 dark:border-maroon-800 flex items-center gap-3 z-20 animate-pulse">
+                            <div class="w-10 h-10 bg-pinkish-100 dark:bg-maroon-950 text-pinkish-600 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-maroon-500 dark:text-gray-400">Klaim Garansi</p>
+                                <p class="text-sm font-bold text-maroon-900 dark:text-white">Mudah & Cepat</p>
+                            </div>
+                        </div>
+
+                        <!-- Main Phone/Showcase Image Container -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-maroon-950 dark:border-maroon-800 bg-maroon-950">
+                            <div class="h-6 w-32 bg-maroon-950 absolute top-0 left-1/2 transform -translate-x-1/2 rounded-b-xl z-20 flex items-center justify-center">
+                                <div class="w-12 h-1.5 bg-maroon-900 rounded-full"></div>
+                            </div>
+                            <!-- A premium simulated UI screenshot -->
+                            <div class="p-6 pt-12 text-white bg-maroon-900 min-h-[400px] flex flex-col justify-between">
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center border-b border-maroon-800 pb-3">
+                                        <span class="font-bold text-sm text-pinkish-300">Naffa Premium App</span>
+                                        <span class="text-xs bg-emerald-600 text-white px-2 py-0.5 rounded font-bold">Terpercaya</span>
+                                    </div>
+                                    <p class="text-xs text-maroon-200">Katalog Unggulan Terlaris:</p>
+                                    
+                                    <!-- Mini simulated product lists -->
+                                    <div class="space-y-2">
+                                        <div class="bg-maroon-950 p-2.5 rounded-lg flex justify-between items-center border border-maroon-800">
+                                            <div class="flex items-center gap-2">
+                                                <i class="fas fa-play text-pinkish-400 animate-pulse"></i>
+                                                <span class="text-xs font-bold">Netflix UHD Sharing</span>
+                                            </div>
+                                            <span class="text-xs text-pinkish-300">Rp 6.000</span>
+                                        </div>
+                                        <div class="bg-maroon-950 p-2.5 rounded-lg flex justify-between items-center border border-maroon-800">
+                                            <div class="flex items-center gap-2">
+                                                <i class="fab fa-spotify text-emerald-400"></i>
+                                                <span class="text-xs font-bold">Spotify Premium 1 Bulan</span>
+                                            </div>
+                                            <span class="text-xs text-pinkish-300">Rp 20.000</span>
+                                        </div>
+                                        <div class="bg-maroon-950 p-2.5 rounded-lg flex justify-between items-center border border-maroon-800">
+                                            <div class="flex items-center gap-2">
+                                                <i class="fas fa-robot text-purple-400"></i>
+                                                <span class="text-xs font-bold">ChatGPT Plus Sharing</span>
+                                            </div>
+                                            <span class="text-xs text-pinkish-300">Rp 20.000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-8 pt-4 border-t border-maroon-800 flex items-center justify-between text-xs text-maroon-300">
+                                    <span>Klik pricelist di bawah</span>
+                                    <i class="fab fa-instagram text-pinkish-400 text-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricelist Section -->
+    <section id="pricelist" class="py-24 bg-white dark:bg-maroon-950 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-3 py-1 text-xs font-bold uppercase tracking-widest bg-pinkish-100 text-pinkish-600 rounded-full">Menu Layanan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">Pricelist Akun Premium Lengkap</h2>
+                <p class="text-maroon-700 dark:text-gray-300">Temukan aplikasi streaming film, musik, penunjang produktivitas, dan AI tercanggih dengan penawaran terbaik.</p>
+                
+                <!-- Live Search and Category Filter -->
+                <div class="pt-6 space-y-4">
+                    <!-- Search Bar -->
+                    <div class="relative max-w-lg mx-auto">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-maroon-400">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input id="search-input" type="text" placeholder="Cari akun (misal: Netflix, Canva, Spotify, Claude)..." class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-maroon-50 dark:bg-maroon-900 border border-maroon-200 dark:border-maroon-800 focus:outline-none focus:ring-2 focus:ring-pinkish-500 transition font-medium text-maroon-900 dark:text-white">
+                    </div>
+
+                    <!-- Category Filter Tabs -->
+                    <div class="flex flex-wrap gap-2 justify-center pt-2" id="category-tabs">
+                        <button data-category="all" class="category-tab active px-5 py-2.5 rounded-xl text-sm font-bold transition-all bg-maroon-800 text-white dark:bg-pinkish-500">Semua</button>
+                        <button data-category="streaming" class="category-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-maroon-50 text-maroon-800 dark:bg-maroon-900 dark:text-gray-300 hover:bg-maroon-100 dark:hover:bg-maroon-800 transition-all">Streaming</button>
+                        <button data-category="music" class="category-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-maroon-50 text-maroon-800 dark:bg-maroon-900 dark:text-gray-300 hover:bg-maroon-100 dark:hover:bg-maroon-800 transition-all">Musik</button>
+                        <button data-category="edu" class="category-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-maroon-50 text-maroon-800 dark:bg-maroon-900 dark:text-gray-300 hover:bg-maroon-100 dark:hover:bg-maroon-800 transition-all">Edukasi & Produktivitas</button>
+                        <button data-category="other" class="category-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-maroon-50 text-maroon-800 dark:bg-maroon-900 dark:text-gray-300 hover:bg-maroon-100 dark:hover:bg-maroon-800 transition-all">Hiburan & Lainnya</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid of Products -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Diisi otomatis melalui JavaScript -->
+            </div>
+
+            <!-- No Products Found Message -->
+            <div id="no-products" class="hidden text-center py-12">
+                <i class="fas fa-search text-4xl text-maroon-300 mb-3"></i>
+                <p class="text-maroon-500 dark:text-gray-400 font-medium">Layanan tidak ditemukan. Silakan hubungi admin di Instagram atau WA untuk menanyakan ketersediaan produk custom lainnya!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Order Section -->
+    <section id="order-form-section" class="py-24 bg-maroon-50 dark:bg-maroon-900/40 border-t border-b border-maroon-100 dark:border-maroon-900 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12 space-y-4">
+                <span class="px-3 py-1 text-xs font-bold uppercase tracking-widest bg-pinkish-100 text-pinkish-600 rounded-full">Kalkulator Order Instant</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">Kalkulasi & Format Order WhatsApp</h2>
+                <p class="text-maroon-700 dark:text-gray-300 text-sm">Pilih produk dan paket langsung dari menu di bawah ini. Total harga akan terhitung otomatis, lalu kirim format order instan langsung ke WhatsApp Admin kami!</p>
+            </div>
+
+            <!-- Order Form Card -->
+            <div class="bg-white dark:bg-maroon-950 p-6 sm:p-10 rounded-3xl shadow-xl border border-maroon-100 dark:border-maroon-800 space-y-6">
+                <div>
+                    <label class="block text-sm font-bold text-maroon-900 dark:text-gray-200 mb-2">1. Pilih Akun Premium</label>
+                    <select id="calc-product" class="w-full px-4 py-3.5 rounded-xl bg-maroon-50 dark:bg-maroon-900 border border-maroon-200 dark:border-maroon-800 text-maroon-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pinkish-500 transition font-semibold">
+                        <!-- Diisi otomatis oleh JavaScript -->
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-maroon-900 dark:text-gray-200 mb-2">2. Pilih Varian / Durasi Paket</label>
+                    <select id="calc-variant" class="w-full px-4 py-3.5 rounded-xl bg-maroon-50 dark:bg-maroon-900 border border-maroon-200 dark:border-maroon-800 text-maroon-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pinkish-500 transition font-semibold">
+                        <!-- Diisi berdasarkan produk terpilih -->
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-maroon-900 dark:text-gray-200 mb-2">3. Masukkan Email Anda (Opsional)</label>
+                        <input id="calc-email" type="email" placeholder="nama@email.com" class="w-full px-4 py-3.5 rounded-xl bg-maroon-50 dark:bg-maroon-900 border border-maroon-200 dark:border-maroon-800 text-maroon-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pinkish-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-maroon-900 dark:text-gray-200 mb-2">4. Masukkan Nama / Kontak (Opsional)</label>
+                        <input id="calc-name" type="text" placeholder="Nama Anda" class="w-full px-4 py-3.5 rounded-xl bg-maroon-50 dark:bg-maroon-900 border border-maroon-200 dark:border-maroon-800 text-maroon-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pinkish-500 transition">
+                    </div>
+                </div>
+
+                <!-- Live Price Display -->
+                <div class="p-5 rounded-2xl bg-pinkish-50 dark:bg-maroon-900 border border-pinkish-100 dark:border-maroon-800 flex justify-between items-center">
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-pinkish-600 font-extrabold">Total Estimasi Pembayaran:</p>
+                        <p id="calc-total-price" class="text-3xl font-extrabold text-pinkish-600 dark:text-pinkish-400">Rp 0</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="px-2.5 py-1 text-xs font-bold text-emerald-800 bg-emerald-100 rounded-full dark:bg-emerald-950 dark:text-emerald-300">Garansi Aktif</span>
+                    </div>
+                </div>
+
+                <!-- Order Action Button -->
+                <button id="btn-submit-calc" class="w-full py-4 rounded-xl bg-maroon-800 hover:bg-maroon-700 dark:bg-pinkish-500 dark:hover:bg-pinkish-600 text-white font-extrabold text-base shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> Kirim Format Pesanan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Verification Section -->
+    <section id="cek-garansi-section" class="py-24 bg-white dark:bg-maroon-950 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12 space-y-4">
+                <span class="px-3 py-1 text-xs font-bold uppercase tracking-widest bg-pinkish-100 text-pinkish-600 rounded-full">Sistem Mandiri Naffa</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">Verifikasi & Cek Garansi Akun</h2>
+                <p class="text-maroon-700 dark:text-gray-300 text-sm">Punya pesanan di Naffa Premium? Cek masa aktif garansi Anda kapan saja dengan memasukkan Invoice/Order ID Anda.</p>
+            </div>
+
+            <!-- Tool Container -->
+            <div class="bg-maroon-50 dark:bg-maroon-900 p-6 sm:p-10 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-6">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input id="warranty-input" type="text" placeholder="Contoh: NP-2026 atau NP-8921" class="flex-grow px-4 py-3.5 rounded-xl border border-maroon-200 dark:border-maroon-800 bg-white dark:bg-maroon-950 text-maroon-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pinkish-500 transition font-semibold">
+                    <button id="btn-check-warranty" class="px-8 py-3.5 rounded-xl bg-maroon-800 hover:bg-maroon-700 dark:bg-pinkish-500 dark:hover:bg-pinkish-600 text-white font-bold transition flex items-center justify-center gap-2">
+                        <i class="fas fa-search"></i> Cek Status
+                    </button>
+                </div>
+
+                <!-- Info Box Tips -->
+                <p class="text-xs text-maroon-500 dark:text-gray-400">
+                    *Tip: Untuk simulasi di atas, silakan gunakan kode <span class="font-bold underline text-pinkish-600 dark:text-pinkish-300 cursor-pointer" onclick="document.getElementById('warranty-input').value='NP-2026'">NP-2026</span> atau <span class="font-bold underline text-pinkish-600 dark:text-pinkish-300 cursor-pointer" onclick="document.getElementById('warranty-input').value='NP-7788'">NP-7788</span> untuk melihat contoh garansi aktif dan selesai.
+                </p>
+
+                <!-- Status Card (Initially hidden) -->
+                <div id="warranty-status-card" class="hidden p-6 rounded-2xl bg-white dark:bg-maroon-950 border border-maroon-200 dark:border-maroon-850 shadow-md space-y-4 animate-fade-in">
+                    <!-- Status Header -->
+                    <div class="flex justify-between items-center border-b border-maroon-100 dark:border-maroon-800 pb-3">
+                        <span class="text-sm font-bold text-maroon-500 dark:text-gray-400">KODE INVOICE: <span id="ws-invoice" class="text-pinkish-500"></span></span>
+                        <span id="ws-badge" class="px-3 py-1 text-xs font-bold rounded-full"></span>
+                    </div>
+                    <!-- Status Body -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-xs text-maroon-400">Nama Pelanggan:</p>
+                            <p id="ws-name" class="font-bold text-maroon-900 dark:text-white"></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-maroon-400">Jenis Produk:</p>
+                            <p id="ws-product" class="font-bold text-maroon-900 dark:text-white"></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-maroon-400">Tanggal Mulai:</p>
+                            <p id="ws-start" class="font-bold text-maroon-900 dark:text-white"></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-maroon-400">Tanggal Selesai:</p>
+                            <p id="ws-end" class="font-bold text-maroon-900 dark:text-white"></p>
+                        </div>
+                    </div>
+                    <!-- Status Footer Button -->
+                    <div id="ws-action-container" class="pt-2">
+                        <a href="https://wa.me/6281217484662" target="_blank" class="text-xs inline-flex items-center gap-1.5 font-bold text-pinkish-500 hover:text-pinkish-600 dark:text-pinkish-400 dark:hover:text-pinkish-300 transition">
+                            <i class="fas fa-headset"></i> Ajukan klaim garansi ke admin jika ada masalah
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricelist Image Section (Lightbox-able) -->
+    <section class="py-20 bg-maroon-100 dark:bg-maroon-900/20 transition-colors duration-300 border-t border-b border-maroon-200 dark:border-maroon-800">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-maroon-200 dark:bg-maroon-900 text-maroon-900 dark:text-pinkish-300 text-xs font-bold uppercase tracking-wider">
+                <i class="fas fa-images"></i> Brosur Digital Resmi
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-maroon-950 dark:text-white">Pricelist Lengkap (Gambar Banner)</h3>
+            <p class="text-maroon-700 dark:text-gray-300 max-w-xl mx-auto text-sm">Klik brosur di bawah ini untuk melihat gambar pricelist penuh dengan kualitas tinggi (bisa di-zoom/perbesar).</p>
+            
+            <!-- Pricelist Banner Container -->
+            <div class="relative group mt-8 cursor-pointer rounded-2xl overflow-hidden border-4 border-white dark:border-maroon-800 shadow-2xl transition hover:scale-[1.01]" id="btn-open-lightbox">
+                <!-- Use standard uploaded image -->
+                <img src="image_823f45.jpg" alt="Pricelist Banner Naffa Premium" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/5c0616/ffffff?text=Naffa+Premium+Pricelist'">
+                <div class="absolute inset-0 bg-maroon-950/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-white">
+                    <div class="w-16 h-16 rounded-full bg-pinkish-500/80 flex items-center justify-center text-2xl text-white shadow-lg mb-3">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <p class="font-bold text-lg tracking-wide">Klik untuk Membuka Fullscreen</p>
+                    <p class="text-xs text-gray-300">Mendukung Fitur Zoom In/Out</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-maroon-950/95 flex flex-col justify-between items-center p-4">
+        <!-- Lightbox Header -->
+        <div class="w-full flex justify-between items-center text-white max-w-7xl mx-auto py-2">
+            <span class="font-bold text-sm tracking-widest text-pinkish-300">PRICELIST NAFFA PREMIUM</span>
+            <div class="flex items-center gap-3">
+                <button id="btn-zoom-in" class="p-3 bg-maroon-900/80 hover:bg-maroon-800 text-white rounded-xl transition text-sm" title="Zoom In">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button id="btn-zoom-out" class="p-3 bg-maroon-900/80 hover:bg-maroon-800 text-white rounded-xl transition text-sm" title="Zoom Out">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+                <button id="btn-zoom-reset" class="p-3 bg-maroon-900/80 hover:bg-maroon-800 text-white rounded-xl transition text-sm" title="Reset Zoom">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button id="btn-close-lightbox" class="p-3 bg-red-600/80 hover:bg-red-600 text-white rounded-xl transition text-sm" title="Tutup">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Lightbox Content -->
+        <div class="zoom-container flex-grow w-full flex items-center justify-center">
+            <img id="lightbox-img" src="image_823f45.jpg" alt="Pricelist Banner Naffa Premium Zoomed" class="zoom-image rounded-lg shadow-2xl transition" onerror="this.src='https://placehold.co/1200x600/5c0616/ffffff?text=Naffa+Premium+Pricelist'">
+        </div>
+
+        <!-- Lightbox Footer -->
+        <div class="text-center text-xs text-maroon-300 py-3">
+            <span>Gunakan tombol zoom di atas atau scroll mouse untuk memperbesar gambar.</span>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal (Dynamic) -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-maroon-950/70 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
+        <div class="bg-white dark:bg-maroon-800 rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-maroon-100 dark:border-maroon-700 transform transition-all scale-95 duration-300" id="product-modal-card">
+            <!-- Modal Header -->
+            <div class="p-6 pb-4 border-b border-maroon-100 dark:border-maroon-700 flex justify-between items-start">
+                <div class="flex items-center gap-3">
+                    <div id="modal-app-icon" class="w-12 h-12 rounded-2xl bg-maroon-50 dark:bg-maroon-900 flex items-center justify-center text-2xl text-maroon-800 dark:text-pinkish-500">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div>
+                        <h4 id="modal-app-name" class="font-extrabold text-xl text-maroon-900 dark:text-white">Netflix Premium</h4>
+                        <span id="modal-app-cat" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-maroon-100 text-maroon-700 dark:bg-maroon-900 dark:text-maroon-300">Streaming</span>
+                    </div>
+                </div>
+                <button id="btn-close-modal" class="p-2 bg-maroon-50 hover:bg-maroon-100 dark:bg-maroon-900 dark:hover:bg-maroon-700 text-maroon-600 dark:text-gray-300 rounded-xl transition">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Body (Dynamic Options List) -->
+            <div class="p-6 max-h-[60vh] overflow-y-auto">
+                <p class="text-xs font-bold text-maroon-400 dark:text-gray-400 uppercase tracking-widest mb-4">Pilihan Paket & Durasi:</p>
+                <div id="modal-variants-list" class="space-y-3">
+                    <!-- Loaded dynamically via JS -->
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 bg-maroon-50 dark:bg-maroon-900/50 border-t border-maroon-100 dark:border-maroon-700">
+                <a id="btn-order-now" href="#" target="_blank" class="w-full py-4 rounded-xl bg-maroon-800 hover:bg-maroon-700 dark:bg-pinkish-500 dark:hover:bg-pinkish-600 text-white font-bold text-base shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                    <i class="fab fa-instagram"></i> Pesan Sekarang via Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cara Order Section -->
+    <section id="cara-order" class="py-24 bg-maroon-50 dark:bg-maroon-900 transition-colors duration-300 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-extrabold text-pinkish-500 tracking-widest uppercase">Langkah Pemesanan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">Bagaimana Cara Order?</h2>
+                <p class="text-maroon-700 dark:text-gray-300">Proses pemesanan sangat mudah, cepat, dan dijamin aman. Ikuti panduan di bawah ini.</p>
+            </div>
+
+            <!-- Timeline Steps -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+                <!-- Timeline Connector Line -->
+                <div class="hidden md:block absolute top-1/3 left-0 right-0 h-0.5 bg-maroon-200 dark:bg-maroon-800 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center space-y-4 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white dark:bg-maroon-800 border-2 border-maroon-200 dark:border-maroon-700 text-maroon-900 dark:text-white group-hover:border-pinkish-500 group-hover:text-pinkish-500 font-extrabold text-xl flex items-center justify-center shadow-lg transition duration-300">
+                        1
+                    </div>
+                    <h3 class="font-bold text-lg text-maroon-900 dark:text-white">Pilih Layanan</h3>
+                    <p class="text-sm text-maroon-600 dark:text-gray-400">Pilih jenis akun premium dan durasi yang Anda inginkan dari daftar pricelist.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center space-y-4 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white dark:bg-maroon-800 border-2 border-maroon-200 dark:border-maroon-700 text-maroon-900 dark:text-white group-hover:border-pinkish-500 group-hover:text-pinkish-500 font-extrabold text-xl flex items-center justify-center shadow-lg transition duration-300">
+                        2
+                    </div>
+                    <h3 class="font-bold text-lg text-maroon-900 dark:text-white">Hitung dengan Kalkulator</h3>
+                    <p class="text-sm text-maroon-600 dark:text-gray-400">Gunakan fitur kalkulator untuk generate format pemesanan instan.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center space-y-4 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white dark:bg-maroon-800 border-2 border-maroon-200 dark:border-maroon-700 text-maroon-900 dark:text-white group-hover:border-pinkish-500 group-hover:text-pinkish-500 font-extrabold text-xl flex items-center justify-center shadow-lg transition duration-300">
+                        3
+                    </div>
+                    <h3 class="font-bold text-lg text-maroon-900 dark:text-white">Hubungi Admin WA / IG</h3>
+                    <p class="text-sm text-maroon-600 dark:text-gray-400">Kirim format atau konsultasikan detail pesanan Anda pada Admin kami.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 text-center space-y-4 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white dark:bg-maroon-800 border-2 border-maroon-200 dark:border-maroon-700 text-maroon-900 dark:text-white group-hover:border-pinkish-500 group-hover:text-pinkish-500 font-extrabold text-xl flex items-center justify-center shadow-lg transition duration-300">
+                        4
+                    </div>
+                    <h3 class="font-bold text-lg text-maroon-900 dark:text-white">Pembayaran Aman</h3>
+                    <p class="text-sm text-maroon-600 dark:text-gray-400">Lakukan pembayaran via Transfer Bank (BCA/Mandiri/BRI) atau E-Wallet (Dana/OVO/GoPay).</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative z-10 text-center space-y-4 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-maroon-800 dark:bg-pinkish-500 text-white font-extrabold text-xl flex items-center justify-center shadow-xl transition duration-300 transform group-hover:scale-110">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-maroon-900 dark:text-white">Akun Premium Dikirim</h3>
+                    <p class="text-sm text-maroon-600 dark:text-gray-400">Setelah pembayaran diterima, akun premium pesanan Anda akan langsung diproses 1-15 menit!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips / Blog Section -->
+    <section id="edu-section" class="py-24 bg-white dark:bg-maroon-950 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-extrabold text-pinkish-500 tracking-widest uppercase">Tips & Edukasi</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">Panduan Penggunaan Akun Premium</h2>
+                <p class="text-maroon-700 dark:text-gray-300">Dapatkan pengalaman terbaik serta pastikan masa pakai akun premium Anda maksimal dengan mengikuti panduan ringkas berikut.</p>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 p-6 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-4 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-2xl bg-white dark:bg-maroon-850 flex items-center justify-center text-xl text-pinkish-500 shadow-sm">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-maroon-950 dark:text-white">Mencegah Screen Limit Netflix</h3>
+                    <p class="text-sm text-maroon-700 dark:text-gray-300 leading-relaxed">
+                        Bagi pengguna paket Sharing, disarankan hanya login di 1 device saja. Hindari mengganti profile pengguna lain agar tidak terjadi tabrakan device.
+                    </p>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 p-6 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-4 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-2xl bg-white dark:bg-maroon-850 flex items-center justify-center text-xl text-pinkish-500 shadow-sm">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-maroon-950 dark:text-white">Dilarang Mengubah Password</h3>
+                    <p class="text-sm text-maroon-700 dark:text-gray-300 leading-relaxed">
+                        Mengubah password atau email akun tipe sharing sangat dilarang dan dapat menghanguskan status garansi aktif Anda secara permanen.
+                    </p>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 p-6 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-4 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-2xl bg-white dark:bg-maroon-850 flex items-center justify-center text-xl text-pinkish-500 shadow-sm">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-maroon-950 dark:text-white">Cara Praktis Klaim Garansi</h3>
+                    <p class="text-sm text-maroon-700 dark:text-gray-300 leading-relaxed">
+                        Apabila akun memerlukan verifikasi ulang, cukup screenshoot kendalanya lalu kirimkan langsung ke admin via WA/Instagram dengan menyebutkan ID Invoice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-maroon-50 dark:bg-maroon-900/30 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-extrabold text-pinkish-500 tracking-widest uppercase">Ulasan Pelanggan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">Apa Kata Pelanggan Kami?</h2>
+                <p class="text-maroon-700 dark:text-gray-300">Kepuasan dan kepercayaan pelanggan adalah komitmen utama Naffa Premium.</p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white dark:bg-maroon-900 p-8 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-4 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-1 text-pinkish-500 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-maroon-700 dark:text-gray-300 text-sm italic">
+                        "Beli Netflix premium disini beneran cepet banget, ga nyampe 5 menit langsung dikirim akunnya. CS-nya juga ramah dan dapet garansi penuh!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-maroon-100 dark:bg-maroon-800 flex items-center justify-center font-bold text-maroon-900 dark:text-white">AD</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-maroon-900 dark:text-white">Andi Dimas</h4>
+                            <p class="text-xs text-maroon-400 dark:text-gray-400">Pembeli Netflix Premium</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white dark:bg-maroon-900 p-8 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-4 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-1 text-pinkish-500 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-maroon-700 dark:text-gray-300 text-sm italic">
+                        "Murah banget dibanding toko sebelah. Akun Canva Pro nya awet terus ga pernah ada masalah. Bakal langganan disini terus pokoknya!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-maroon-100 dark:bg-maroon-800 flex items-center justify-center font-bold text-maroon-900 dark:text-white">NS</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-maroon-900 dark:text-white">Novi Sartika</h4>
+                            <p class="text-xs text-maroon-400 dark:text-gray-400">Pembeli Canva Pro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white dark:bg-maroon-900 p-8 rounded-3xl border border-maroon-100 dark:border-maroon-800 space-y-4 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center gap-1 text-pinkish-500 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-maroon-700 dark:text-gray-300 text-sm italic">
+                        "Sempat bingung mau pilih ChatGPT atau Grok, untung adminnya sabar ngejelasin satu-satu. Proses transaksinya instan, TOP bgt."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-full bg-maroon-100 dark:bg-maroon-800 flex items-center justify-center font-bold text-maroon-900 dark:text-white">RH</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-maroon-900 dark:text-white">Rian Hidayat</h4>
+                            <p class="text-xs text-maroon-400 dark:text-gray-400">Pembeli ChatGPT Plus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white dark:bg-maroon-950 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-xs font-extrabold text-pinkish-500 tracking-widest uppercase">Pertanyaan Umum</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maroon-950 dark:text-white">FAQ - Sering Ditanyakan</h2>
+                <p class="text-maroon-700 dark:text-gray-300">Berikut beberapa rincian pertanyaan yang paling sering diajukan pelanggan.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 rounded-2xl border border-maroon-100 dark:border-maroon-850 overflow-hidden transition shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-maroon-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>Apakah akun aman dan legal?</span>
+                        <i class="fas fa-chevron-down text-maroon-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="px-6 pb-5 text-sm text-maroon-600 dark:text-gray-300 leading-relaxed">
+                            Ya, akun dikirim sesuai ketentuan dan dijamin aman digunakan. Semua akun yang dijual di Naffa Premium legal dan bergaransi penuh sesuai ketentuan paket durasi yang dibeli.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 rounded-2xl border border-maroon-100 dark:border-maroon-850 overflow-hidden transition shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-maroon-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>Berapa lama prosesnya?</span>
+                        <i class="fas fa-chevron-down text-maroon-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="px-6 pb-5 text-sm text-maroon-600 dark:text-gray-300 leading-relaxed">
+                            Proses pengiriman akun sangat cepat, biasanya berkisar antara 1–15 menit setelah pembayaran Anda dikonfirmasi oleh admin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 rounded-2xl border border-maroon-100 dark:border-maroon-850 overflow-hidden transition shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-maroon-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>Apa saja metode pembayaran yang didukung?</span>
+                        <i class="fas fa-chevron-down text-maroon-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="px-6 pb-5 text-sm text-maroon-600 dark:text-gray-300 leading-relaxed">
+                            Kami mendukung pembayaran fleksibel lewat Transfer Bank utama serta berbagai layanan e-wallet populer (seperti Dana, OVO, GoPay, ShopeePay, LinkAja, dll).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-maroon-50 dark:bg-maroon-900 rounded-2xl border border-maroon-100 dark:border-maroon-850 overflow-hidden transition shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-maroon-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>Apakah saya bisa memperpanjang akun yang sama?</span>
+                        <i class="fas fa-chevron-down text-maroon-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="px-6 pb-5 text-sm text-maroon-600 dark:text-gray-300 leading-relaxed">
+                            Tentu saja! Anda bisa melakukan perpanjangan paket akun Anda kapan saja. Hubungi admin sebelum masa aktif akun habis untuk mempermudah proses perpanjangan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-maroon-50 dark:bg-maroon-900/10 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-maroon-900 to-pinkish-800 text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
+                <!-- Background visual flare -->
+                <div class="absolute bottom-0 right-0 w-80 h-80 bg-pinkish-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <span class="text-xs font-bold text-pinkish-300 uppercase tracking-widest bg-maroon-950/60 px-4 py-2 rounded-full border border-white/10">Hubungi Kami</span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Siap Untuk Order? <br />Mulai Sekarang!</h2>
+                        <p class="text-gray-200 max-w-xl mx-auto lg:mx-0">
+                            Silakan chat admin kami untuk konsultasi, order akun, atau mengajukan pertanyaan. Naffa Premium selalu siap membantu Anda mendapatkan produk digital berkualitas terbaik.
+                        </p>
+
+                        <!-- Social Stats Cards -->
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                            <div class="bg-maroon-950/50 p-4 rounded-2xl border border-white/5 flex items-center gap-3">
+                                <i class="fab fa-instagram text-pink-400 text-2xl"></i>
+                                <div class="text-left">
+                                    <p class="text-xs text-gray-300">Instagram</p>
+                                    <p class="text-sm font-bold">@naffaprem</p>
+                                </div>
+                            </div>
+                            <div class="bg-maroon-950/50 p-4 rounded-2xl border border-white/5 flex items-center gap-3">
+                                <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+                                <div class="text-left">
+                                    <p class="text-xs text-gray-300">WhatsApp</p>
+                                    <p class="text-sm font-bold">0812-1748-4662</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Action Column -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center space-y-4">
+                        <div class="bg-maroon-950/60 p-6 rounded-3xl border border-white/10 w-full text-center space-y-6">
+                            <h4 class="font-extrabold text-lg tracking-wide text-pinkish-300">KIRIM PESAN LANGSUNG</h4>
+                            
+                            <a href="https://www.instagram.com/naffaprem/" target="_blank" class="w-full py-4 rounded-2xl bg-white text-maroon-900 font-extrabold text-base hover:bg-gray-100 transition duration-300 flex items-center justify-center gap-3 shadow-xl">
+                                <i class="fab fa-instagram text-pink-500 text-xl"></i> Chat Admin Sekarang
+                            </a>
+
+                            <div class="flex items-center justify-center gap-2 text-xs text-gray-300">
+                                <i class="fas fa-clock"></i> Response time: 1–15 Menit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-maroon-950 text-white border-t border-maroon-900 py-12 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-maroon-900">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-pinkish-500 flex items-center justify-center">
+                            <span class="text-white font-extrabold text-sm">N</span>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight">NAFFA<span class="text-pinkish-500"> PREMIUM</span></span>
+                    </div>
+                    <p class="text-xs text-maroon-300 leading-relaxed max-w-xs">
+                        Penyedia akun premium digital terpercaya di Indonesia. Menyediakan berbagai layanan streaming film, musik, dan tools produktivitas premium bergaransi.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm tracking-widest text-pinkish-400 uppercase">Tautan Cepat</h4>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-maroon-300">
+                        <a href="#home" class="hover:text-white transition">Home</a>
+                        <a href="#pricelist" class="hover:text-white transition">Pricelist</a>
+                        <a href="#cara-order" class="hover:text-white transition">Cara Order</a>
+                        <a href="#faq" class="hover:text-white transition">FAQ</a>
+                        <a href="#cek-garansi-section" class="hover:text-white transition">Cek Garansi</a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm tracking-widest text-pinkish-400 uppercase">Hubungi Kami</h4>
+                    <div class="space-y-2 text-xs text-maroon-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-instagram text-pink-400 text-base"></i>
+                            <a href="https://www.instagram.com/naffaprem/" target="_blank" class="hover:text-white transition">@naffaprem</a>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-whatsapp text-green-500 text-base"></i>
+                            <a href="https://wa.me/6281217484662" target="_blank" class="hover:text-white transition">0812-1748-4662</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-maroon-400">
+                <p>&copy; 2026 Naffa Premium. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/naffaprem/" target="_blank" class="hover:text-white transition">Instagram</a>
+                    <a href="https://wa.me/6281217484662" target="_blank" class="hover:text-white transition">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281217484662?text=Halo%20Naffa%20Premium,%20saya%20tertarik%20untuk%20order%20akun%20premium" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-600 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition duration-300 animate-pulse" title="Hubungi kami di WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="btn-back-to-top" class="fixed bottom-6 left-6 z-40 w-12 h-12 bg-maroon-800 dark:bg-pinkish-500 text-white dark:text-white rounded-full flex items-center justify-center text-lg shadow-2xl hover:scale-105 transition-all duration-300 opacity-0 pointer-events-none" title="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- App JavaScript Logic -->
+    <script>
+        // Data Produk Digital Lengkap dengan Harga dari Foto
+        const productData = [
+            // STREAMING CATEGORY
+            {
+                id: 'netflix',
+                name: 'Netflix Premium',
+                category: 'streaming',
+                icon: 'fa-play',
+                color: 'text-red-600',
+                startingPrice: 'Rp 6.000',
+                variants: [
+                    { name: '2 Hari Sharing (1 User)', price: 'Rp 6.000' },
+                    { name: '1 Minggu Sharing (1 User)', price: 'Rp 18.000' },
+                    { name: '1 Minggu Sharing (2 User)', price: 'Rp 15.000' },
+                    { name: '1 Bulan Sharing (1 User)', price: 'Rp 32.000' },
+                    { name: '1 Bulan Sharing (2 User)', price: 'Rp 25.000' },
+                    { name: '1 Minggu Semiprivate', price: 'Rp 22.000' },
+                    { name: '1 Bulan Semiprivate', price: 'Rp 40.000' }
+                ]
+            },
+            {
+                id: 'disney',
+                name: 'Disney+ Hotstar',
+                category: 'streaming',
+                icon: 'fa-film',
+                color: 'text-blue-500',
+                startingPrice: 'Rp 4.000',
+                variants: [
+                    { name: '1 Hari', price: 'Rp 4.000' },
+                    { name: '1 Minggu', price: 'Rp 7.000' },
+                    { name: '1 Bulan Sharing (10 User)', price: 'Rp 22.000' },
+                    { name: '1 Bulan Sharing (8 User)', price: 'Rp 26.000' },
+                    { name: '1 Bulan Sharing (6 User)', price: 'Rp 30.000' }
+                ]
+            },
+            {
+                id: 'hbo',
+                name: 'HBO Max',
+                category: 'streaming',
+                icon: 'fa-tv',
+                color: 'text-indigo-600',
+                startingPrice: 'Rp 12.000',
+                variants: [
+                    { name: '1 Bulan Sharing Standard', price: 'Rp 12.000' },
+                    { name: '1 Bulan Sharing Ultimate', price: 'Rp 17.000' },
+                    { name: '1 Bulan Private', price: 'Rp 45.000' }
+                ]
+            },
+            {
+                id: 'prime',
+                name: 'Prime Video',
+                category: 'streaming',
+                icon: 'fa-video',
+                color: 'text-cyan-500',
+                startingPrice: 'Rp 12.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 12.000' },
+                    { name: '1 Tahun Sharing', price: 'Rp 16.000' },
+                    { name: '1 Bulan Private', price: 'Rp 22.000' }
+                ]
+            },
+            {
+                id: 'viu',
+                name: 'Viu Premium',
+                category: 'streaming',
+                icon: 'fa-mobile-alt',
+                color: 'text-yellow-500',
+                startingPrice: 'Rp 2.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 2.000' },
+                    { name: '3 Bulan', price: 'Rp 3.000' },
+                    { name: '6 Bulan', price: 'Rp 6.000' },
+                    { name: '1 Tahun', price: 'Rp 8.000' },
+                    { name: 'Lifetime', price: 'Rp 10.000' }
+                ]
+            },
+            {
+                id: 'vidio',
+                name: 'Vidio Premium',
+                category: 'streaming',
+                icon: 'fa-desktop',
+                color: 'text-red-500',
+                startingPrice: 'Rp 7.000',
+                variants: [
+                    { name: '1 Bulan Sharing (4 User)', price: 'Rp 12.000' },
+                    { name: '1 Bulan Sharing (2 User)', price: 'Rp 28.000' },
+                    { name: '1 Bulan Private', price: 'Rp 35.000' },
+                    { name: '1 Bulan TV', price: 'Rp 7.000' },
+                    { name: '1 Tahun TV', price: 'Rp 15.000' }
+                ]
+            },
+            {
+                id: 'wetv',
+                name: 'WeTV VIP',
+                category: 'streaming',
+                icon: 'fa-heart',
+                color: 'text-orange-500',
+                startingPrice: 'Rp 8.000',
+                variants: [
+                    { name: '1 Bulan Sharing (6 User)', price: 'Rp 8.000' },
+                    { name: '1 Bulan Sharing (3 User)', price: 'Rp 15.000' },
+                    { name: '1 Bulan Private', price: 'Rp 35.000' }
+                ]
+            },
+            {
+                id: 'appletv',
+                name: 'Apple TV',
+                category: 'streaming',
+                icon: 'fa-apple',
+                color: 'text-gray-800 dark:text-white',
+                startingPrice: 'Rp 27.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 27.000' },
+                    { name: '1 Bulan Private', price: 'Rp 50.000' }
+                ]
+            },
+            {
+                id: 'mangotv',
+                name: 'Mango TV',
+                category: 'streaming',
+                icon: 'fa-leaf',
+                color: 'text-orange-400',
+                startingPrice: 'Rp 15.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 15.000' }
+                ]
+            },
+            {
+                id: 'iqiyi',
+                name: 'iQIYI VIP',
+                category: 'streaming',
+                icon: 'fa-play-circle',
+                color: 'text-green-500',
+                startingPrice: 'Rp 8.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 8.000' },
+                    { name: '3 Bulan Sharing', price: 'Rp 16.000' },
+                    { name: '1 Tahun Sharing', price: 'Rp 24.000' },
+                    { name: '1 Bulan Private', price: 'Rp 37.000' }
+                ]
+            },
+            {
+                id: 'viki',
+                name: 'Viki Premium',
+                category: 'streaming',
+                icon: 'fa-star-half-alt',
+                color: 'text-blue-400',
+                startingPrice: 'Rp 10.000',
+                variants: [
+                    { name: '7 Hari', price: 'Rp 10.000' }
+                ]
+            },
+            {
+                id: 'gagaoolala',
+                name: 'Gagaoolala',
+                category: 'streaming',
+                icon: 'fa-transgender-alt',
+                color: 'text-pink-400',
+                startingPrice: 'Rp 15.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 15.000' }
+                ]
+            },
+            {
+                id: 'genflix',
+                name: 'Genflix',
+                category: 'streaming',
+                icon: 'fa-bolt',
+                color: 'text-red-400',
+                startingPrice: 'Rp 10.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 10.000' },
+                    { name: '1 Bulan Private', price: 'Rp 20.000' }
+                ]
+            },
+
+            // MUSIC CATEGORY
+            {
+                id: 'spotify',
+                name: 'Spotify Premium',
+                category: 'music',
+                icon: 'fa-spotify',
+                color: 'text-green-500',
+                startingPrice: 'Rp 20.000',
+                variants: [
+                    { name: '1 Bulan Individual', price: 'Rp 20.000' },
+                    { name: '3 Bulan Individual', price: 'Rp 36.000' },
+                    { name: '1 Bulan Family', price: 'Rp 30.000' },
+                    { name: '2 Bulan Family', price: 'Rp 40.000' }
+                ]
+            },
+            {
+                id: 'applemusic',
+                name: 'Apple Music Mees',
+                category: 'music',
+                icon: 'fa-music',
+                color: 'text-red-500',
+                startingPrice: 'Rp 15.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 15.000' },
+                    { name: '2 Bulan', price: 'Rp 18.000' },
+                    { name: '3 Bulan', price: 'Rp 25.000' },
+                    { name: '4 Bulan', price: 'Rp 30.000' }
+                ]
+            },
+            {
+                id: 'resso',
+                name: 'Resso Premium',
+                category: 'music',
+                icon: 'fa-headphones',
+                color: 'text-purple-400',
+                startingPrice: 'Rp 15.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 15.000' }
+                ]
+            },
+
+            // EDUCATION & PRODUCTIVITY
+            {
+                id: 'canva',
+                name: 'Canva Pro',
+                category: 'edu',
+                icon: 'fa-crop-alt',
+                color: 'text-blue-400',
+                startingPrice: 'Rp 500',
+                variants: [
+                    { name: '1 Hari', price: 'Rp 500' },
+                    { name: '1 Bulan', price: 'Rp 3.000' },
+                    { name: '1 Tahun', price: 'Rp 15.000' },
+                    { name: 'Lifetime', price: 'Rp 18.000' },
+                    { name: '1 Bulan Owner', price: 'Rp 7.000' }
+                ]
+            },
+            {
+                id: 'grammarly',
+                name: 'Grammarly',
+                category: 'edu',
+                icon: 'fa-pen-fancy',
+                color: 'text-emerald-500',
+                startingPrice: 'Rp 12.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 12.000' },
+                    { name: '1 Bulan Private', price: 'Rp 25.000' }
+                ]
+            },
+            {
+                id: 'chatgpt',
+                name: 'ChatGPT Plus',
+                category: 'edu',
+                icon: 'fa-robot',
+                color: 'text-teal-500',
+                startingPrice: 'Rp 20.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 20.000' },
+                    { name: '1 Bulan Invite', price: 'Rp 28.000' }
+                ]
+            },
+            {
+                id: 'claude',
+                name: 'Claude Pro AI',
+                category: 'edu',
+                icon: 'fa-brain',
+                color: 'text-amber-600',
+                startingPrice: 'Rp 25.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 25.000' },
+                    { name: '1 Bulan Private', price: 'Rp 45.000' }
+                ]
+            },
+            {
+                id: 'duolingo',
+                name: 'Duolingo Plus',
+                category: 'edu',
+                icon: 'fa-language',
+                color: 'text-green-400',
+                startingPrice: 'Rp 10.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 10.000' }
+                ]
+            },
+            {
+                id: 'quizlet',
+                name: 'Quizlet Plus',
+                category: 'edu',
+                icon: 'fa-question-circle',
+                color: 'text-indigo-400',
+                startingPrice: 'Rp 22.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 22.000' },
+                    { name: '3 Bulan', price: 'Rp 32.000' }
+                ]
+            },
+            {
+                id: 'deepl',
+                name: 'DeepL Pro',
+                category: 'edu',
+                icon: 'fa-globe-asia',
+                color: 'text-blue-900 dark:text-blue-200',
+                startingPrice: 'Rp 15.000',
+                variants: [
+                    { name: '1 Bulan', price: 'Rp 15.000' }
+                ]
+            },
+            {
+                id: 'supergrok',
+                name: 'Supergrok AI (xAI)',
+                category: 'edu',
+                icon: 'fa-brain',
+                color: 'text-purple-600',
+                startingPrice: 'Rp 13.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 13.000' },
+                    { name: '1 Bulan Private', price: 'Rp 32.000' },
+                    { name: '1 Bulan Private (Heavy)', price: 'Rp 36.000' }
+                ]
+            },
+            {
+                id: 'ilovepdf',
+                name: 'iLovePDF Pro',
+                category: 'edu',
+                icon: 'fa-file-pdf',
+                color: 'text-red-500',
+                startingPrice: 'Rp 24.000',
+                variants: [
+                    { name: '1 Tahun Sharing', price: 'Rp 24.000' }
+                ]
+            },
+            {
+                id: 'camscanner',
+                name: 'CamScanner Premium',
+                category: 'edu',
+                icon: 'fa-camera',
+                color: 'text-teal-400',
+                startingPrice: 'Rp 7.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 7.000' },
+                    { name: '1 Tahun Sharing', price: 'Rp 15.000' }
+                ]
+            },
+
+            // ENTERTAINMENT & OTHERS
+            {
+                id: 'wattpad',
+                name: 'Wattpad Premium',
+                category: 'other',
+                icon: 'fa-book-open',
+                color: 'text-orange-500',
+                startingPrice: 'Rp 7.000',
+                variants: [
+                    { name: '1 Bulan Sharing (A)', price: 'Rp 7.000' },
+                    { name: '3 Bulan Sharing (A)', price: 'Rp 12.000' },
+                    { name: '6 Bulan Sharing (A)', price: 'Rp 15.000' },
+                    { name: '1 Tahun Sharing (A)', price: 'Rp 20.000' }
+                ]
+            },
+            {
+                id: 'scribd',
+                name: 'Scribd Premium',
+                category: 'other',
+                icon: 'fa-file-alt',
+                color: 'text-blue-500',
+                startingPrice: 'Rp 6.000',
+                variants: [
+                    { name: '1 Bulan Sharing', price: 'Rp 6.000' },
+                    { name: '1 Bulan Private', price: 'Rp 8.000' }
+                ]
+            },
+            {
+                id: 'loklok',
+                name: 'LokLok VIP',
+                category: 'other',
+                icon: 'fa-video-slash',
+                color: 'text-yellow-400',
+                startingPrice: 'Rp 14.000',
+                variants: [
+                    { name: '14 Hari Sharing', price: 'Rp 14.000' },
+                    { name: '20 Hari Sharing', price: 'Rp 17.000' },
+                    { name: '20 Hari Private', price: 'Rp 23.000' }
+                ]
+            },
+            {
+                id: 'youtube',
+                name: 'YouTube Premium',
+                category: 'other',
+                icon: 'fa-youtube',
+                color: 'text-red-600',
+                startingPrice: 'Rp 5.000',
+                variants: [
+                    { name: '1 Bulan Family', price: 'Rp 5.000' },
+                    { name: '2 Bulan Family', price: 'Rp 9.000' },
+                    { name: '3 Bulan Family', price: 'Rp 13.000' },
+                    { name: '1 Bulan Indp', price: 'Rp 10.000' }
+                ]
+            },
+            {
+                id: 'capcut',
+                name: 'CapCut Pro',
+                category: 'other',
+                icon: 'fa-cut',
+                color: 'text-rose-500',
+                startingPrice: 'Rp 5.000',
+                variants: [
+                    { name: '7 Hari', price: 'Rp 5.000' },
+                    { name: '1 Bulan', price: 'Rp 10.000' },
+                    { name: '1 Bulan Private', price: 'Rp 20.000' }
+                ]
+            }
+        ];
+
+        // Simulasi Data Garansi untuk Database Pencarian Mandiri
+        const mockWarrantyDatabase = {
+            "NP-2026": {
+                invoice: "NP-2026",
+                name: "Rizky Amelia",
+                product: "Netflix UHD - 1 Bulan Sharing",
+                start: "01 Juni 2026",
+                end: "01 Juli 2026",
+                status: "active"
+            },
+            "NP-7788": {
+                invoice: "NP-7788",
+                name: "Bayu Saputra",
+                product: "Spotify Premium - 1 Bulan Individual",
+                start: "10 April 2026",
+                end: "10 Mei 2026",
+                status: "expired"
+            }
+        };
+
+        // Theme Toggle / Dark Mode Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.className = 'fas fa-moon';
+                mobileThemeIcon.className = 'fas fa-moon';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                mobileThemeIcon.className = 'fas fa-sun';
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+        // Check Local Storage theme preference
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeIcon.className = 'fas fa-sun';
+            mobileThemeIcon.className = 'fas fa-sun';
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeIcon.className = 'fas fa-moon';
+            mobileThemeIcon.className = 'fas fa-moon';
+        }
+
+        // Hide Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Generate Product Cards
+        const productGrid = document.getElementById('product-grid');
+        const searchInput = document.getElementById('search-input');
+        const categoryTabs = document.getElementById('category-tabs');
+        const noProducts = document.getElementById('no-products');
+
+        function renderProducts(searchQuery = '', filterCategory = 'all') {
+            productGrid.innerHTML = '';
+            
+            const filtered = productData.filter(p => {
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase());
+                const matchesCategory = filterCategory === 'all' || p.category === filterCategory;
+                return matchesSearch && matchesCategory;
+            });
+
+            if (filtered.length === 0) {
+                noProducts.classList.remove('hidden');
+            } else {
+                noProducts.classList.add('hidden');
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-maroon-50/50 dark:bg-maroon-900 p-6 rounded-3xl border border-maroon-100 dark:border-maroon-800 flex flex-col justify-between hover:border-pinkish-500/50 hover:shadow-xl hover:-translate-y-1 transition duration-300 cursor-pointer group';
+                card.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="w-12 h-12 rounded-2xl bg-white dark:bg-maroon-800 flex items-center justify-center text-2xl ${p.color} shadow-sm">
+                                <i class="fas ${p.icon}"></i>
+                            </div>
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-maroon-100 dark:bg-maroon-800 text-maroon-600 dark:text-gray-300 capitalize">${p.category === 'edu' ? 'Edukasi' : p.category === 'other' ? 'Hiburan' : p.category}</span>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-lg text-maroon-900 dark:text-white group-hover:text-pinkish-500 transition-colors">${p.name}</h3>
+                            <p class="text-xs text-maroon-400 dark:text-gray-400 mt-1">${p.variants.length} Opsi Paket</p>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-maroon-100 dark:border-maroon-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold text-maroon-400 dark:text-gray-500 tracking-wider">Mulai Dari</p>
+                            <p class="text-base font-extrabold text-pinkish-500 dark:text-pinkish-400">${p.startingPrice}</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-maroon-800 dark:bg-pinkish-500 text-white dark:text-white flex items-center justify-center transition group-hover:scale-105">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                `;
+
+                // Open modal on click
+                card.addEventListener('click', () => openProductModal(p));
+                productGrid.appendChild(card);
+            });
+        }
+
+        // Initialize Render
+        renderProducts();
+
+        // Search Input Event
+        searchInput.addEventListener('input', (e) => {
+            const activeTab = document.querySelector('.category-tab.active');
+            const category = activeTab ? activeTab.getAttribute('data-category') : 'all';
+            renderProducts(e.target.value, category);
+        });
+
+        // Category Tab Event
+        categoryTabs.addEventListener('click', (e) => {
+            if (e.target.classList.contains('category-tab')) {
+                document.querySelectorAll('.category-tab').forEach(btn => {
+                    btn.className = 'category-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-maroon-50 text-maroon-800 dark:bg-maroon-900 dark:text-gray-300 hover:bg-maroon-100 dark:hover:bg-maroon-800 transition-all';
+                });
+                
+                e.target.className = 'category-tab active px-5 py-2.5 rounded-xl text-sm font-bold transition-all bg-maroon-800 text-white dark:bg-pinkish-500';
+                
+                const category = e.target.getAttribute('data-category');
+                renderProducts(searchInput.value, category);
+            }
+        });
+
+        // Product Modal Logic
+        const productModal = document.getElementById('product-modal');
+        const modalAppName = document.getElementById('modal-app-name');
+        const modalAppCat = document.getElementById('modal-app-cat');
+        const modalAppIcon = document.getElementById('modal-app-icon');
+        const modalVariantsList = document.getElementById('modal-variants-list');
+        const btnOrderNow = document.getElementById('btn-order-now');
+        const btnCloseModal = document.getElementById('btn-close-modal');
+
+        function openProductModal(product) {
+            modalAppName.innerText = product.name;
+            modalAppCat.innerText = product.category === 'edu' ? 'Edukasi & AI' : product.category === 'music' ? 'Musik' : product.category === 'streaming' ? 'Streaming' : 'Hiburan & Lainnya';
+            modalAppIcon.innerHTML = `<i class="fas ${product.icon} ${product.color}"></i>`;
+            
+            modalVariantsList.innerHTML = '';
+            product.variants.forEach(v => {
+                const item = document.createElement('div');
+                item.className = 'flex justify-between items-center bg-maroon-50 dark:bg-maroon-900 p-4 rounded-xl border border-maroon-100 dark:border-maroon-800/80';
+                item.innerHTML = `
+                    <span class="font-bold text-sm text-maroon-900 dark:text-gray-200">${v.name}</span>
+                    <span class="font-extrabold text-pinkish-500 dark:text-pinkish-400 text-sm bg-white dark:bg-maroon-800 px-3 py-1 rounded-lg shadow-sm border border-maroon-100 dark:border-maroon-700">${v.price}</span>
+                `;
+                modalVariantsList.appendChild(item);
+            });
+
+            // Set Instagram Action
+            btnOrderNow.href = `https://www.instagram.com/naffaprem/`;
+
+            productModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeProductModal() {
+            productModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        btnCloseModal.addEventListener('click', closeProductModal);
+        productModal.addEventListener('click', (e) => {
+            if (e.target === productModal) closeProductModal();
+        });
+
+        // FAQ Toggle Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
+                    document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Back to Top Button
+        const btnBackToTop = document.getElementById('btn-back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnBackToTop.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                btnBackToTop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        btnBackToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Pricelist Image Lightbox Logic (Zoom in & Out)
+        const btnOpenLightbox = document.getElementById('btn-open-lightbox');
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const btnCloseLightbox = document.getElementById('btn-close-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const btnZoomIn = document.getElementById('btn-zoom-in');
+        const btnZoomOut = document.getElementById('btn-zoom-out');
+        const btnZoomReset = document.getElementById('btn-zoom-reset');
+
+        let zoomScale = 1;
+
+        function updateZoom() {
+            lightboxImg.style.transform = `scale(${zoomScale})`;
+            if (zoomScale > 1) {
+                lightboxImg.classList.add('zoomed');
+            } else {
+                lightboxImg.classList.remove('zoomed');
+            }
+        }
+
+        btnOpenLightbox.addEventListener('click', () => {
+            lightboxModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            zoomScale = 1;
+            updateZoom();
+        });
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        btnCloseLightbox.addEventListener('click', closeLightbox);
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal || e.target.classList.contains('zoom-container')) {
+                closeLightbox();
+            }
+        });
+
+        btnZoomIn.addEventListener('click', () => {
+            if (zoomScale < 3) {
+                zoomScale += 0.25;
+                updateZoom();
+            }
+        });
+
+        btnZoomOut.addEventListener('click', () => {
+            if (zoomScale > 0.5) {
+                zoomScale -= 0.25;
+                updateZoom();
+            }
+        });
+
+        btnZoomReset.addEventListener('click', () => {
+            zoomScale = 1;
+            updateZoom();
+        });
+
+        lightboxImg.addEventListener('dblclick', () => {
+            if (zoomScale === 1) {
+                zoomScale = 2;
+            } else {
+                zoomScale = 1;
+            }
+            updateZoom();
+        });
+
+        // --- NEW: KELOLA KALKULATOR ORDER DAN FORMAT WA ---
+        const calcProductSelect = document.getElementById('calc-product');
+        const calcVariantSelect = document.getElementById('calc-variant');
+        const calcTotalPrice = document.getElementById('calc-total-price');
+        const btnSubmitCalc = document.getElementById('btn-submit-calc');
+
+        // Populate Products Select
+        function initCalculator() {
+            calcProductSelect.innerHTML = '';
+            productData.forEach(p => {
+                const opt = document.createElement('option');
+                opt.value = p.id;
+                opt.innerText = p.name;
+                calcProductSelect.appendChild(opt);
+            });
+            updateCalcVariants();
+        }
+
+        function updateCalcVariants() {
+            const selectedProdId = calcProductSelect.value;
+            const product = productData.find(p => p.id === selectedProdId);
+            calcVariantSelect.innerHTML = '';
+            if (product) {
+                product.variants.forEach((v, index) => {
+                    const opt = document.createElement('option');
+                    opt.value = index;
+                    opt.innerText = `${v.name} (${v.price})`;
+                    calcVariantSelect.appendChild(opt);
+                });
+            }
+            updateCalcPrice();
+        }
+
+        function updateCalcPrice() {
+            const selectedProdId = calcProductSelect.value;
+            const product = productData.find(p => p.id === selectedProdId);
+            if (product) {
+                const varIndex = calcVariantSelect.value;
+                const variant = product.variants[varIndex];
+                if (variant) {
+                    calcTotalPrice.innerText = variant.price;
+                }
+            }
+        }
+
+        calcProductSelect.addEventListener('change', updateCalcVariants);
+        calcVariantSelect.addEventListener('change', updateCalcPrice);
+
+        btnSubmitCalc.addEventListener('click', () => {
+            const prodId = calcProductSelect.value;
+            const product = productData.find(p => p.id === prodId);
+            const varIndex = calcVariantSelect.value;
+            const variant = product ? product.variants[varIndex] : null;
+            const email = document.getElementById('calc-email').value || '-';
+            const name = document.getElementById('calc-name').value || '-';
+
+            if (product && variant) {
+                const message = `Halo Naffa Premium, saya ingin order:\n\n` +
+                                `• Produk: *${product.name}*\n` +
+                                `• Paket/Durasi: *${variant.name}*\n` +
+                                `• Harga: *${variant.price}*\n` +
+                                `• Nama Lengkap: *${name}*\n` +
+                                `• Email Terdaftar: *${email}*\n\n` +
+                                `Tolong info detail pembayaran & instruksi loginnya ya admin, terima kasih!`;
+                
+                const waUrl = `https://wa.me/6281217484662?text=${encodeURIComponent(message)}`;
+                window.open(waUrl, '_blank');
+            }
+        });
+
+        // --- NEW: KELOLA CEK GARANSI INTERAKTIF (MOCKUP DATABASE) ---
+        const btnCheckWarranty = document.getElementById('btn-check-warranty');
+        const warrantyInput = document.getElementById('warranty-input');
+        const warrantyStatusCard = document.getElementById('warranty-status-card');
+
+        btnCheckWarranty.addEventListener('click', () => {
+            const val = warrantyInput.value.trim().toUpperCase();
+            if (!val) return;
+
+            const record = mockWarrantyDatabase[val];
+            if (record) {
+                document.getElementById('ws-invoice').innerText = record.invoice;
+                document.getElementById('ws-name').innerText = record.name;
+                document.getElementById('ws-product').innerText = record.product;
+                document.getElementById('ws-start').innerText = record.start;
+                document.getElementById('ws-end').innerText = record.end;
+
+                const badge = document.getElementById('ws-badge');
+                if (record.status === 'active') {
+                    badge.innerText = 'GARANSI AKTIF';
+                    badge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300';
+                } else {
+                    badge.innerText = 'GARANSI BERAKHIR';
+                    badge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300';
+                }
+
+                warrantyStatusCard.classList.remove('hidden');
+            } else {
+                // Generate Dynamic Mock Record to ensure user always gets simulated response for interactive fun!
+                const randomNameList = ["Ahmad Fauzi", "Siti Rahma", "Dian Pratama", "Vina Melati"];
+                const randomName = randomNameList[Math.floor(Math.random() * randomNameList.length)];
+                
+                document.getElementById('ws-invoice').innerText = val;
+                document.getElementById('ws-name').innerText = randomName;
+                document.getElementById('ws-product').innerText = "Simulasi Akun Premium Active";
+                document.getElementById('ws-start').innerText = "Hari Ini";
+                document.getElementById('ws-end').innerText = "30 Hari Kedepan";
+
+                const badge = document.getElementById('ws-badge');
+                badge.innerText = 'GARANSI SIMULASI';
+                badge.className = 'px-3 py-1 text-xs font-bold rounded-full bg-pinkish-100 text-pinkish-600';
+
+                warrantyStatusCard.classList.remove('hidden');
+            }
+        });
+
+        // Initialize Calculator
+        initCalculator();
+    </script>
+</body>
+</html>
